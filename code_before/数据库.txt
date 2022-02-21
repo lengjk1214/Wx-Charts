@@ -1,0 +1,26 @@
+class User(models.Model):
+    objects = models.Manager()
+    user_id = models.CharField(max_length=100)
+    user_name = models.CharField(max_length=100)
+    telephone = models.CharField(max_length=100)
+    password = models.CharField(max_length=100)
+    image = models.CharField(max_length=100)#头像
+    all_change = models.CharField(max_length=100)#所有的次数
+    remaining_change = models.CharField(max_length=100)# 剩余的次数
+    remaining_buy = models.CharField(max_length=100)#剩余购买次数
+    history = models.CharField(max_length=100)  #历史记录
+
+class Record(models.Model):
+    objects = models.Manager()
+    user_id = models.CharField(max_length=100)
+    time = models.CharField(max_length=100)#交易时间
+    money = models.CharField(max_length=100)  #交易金额
+    amount = models.CharField(max_length=100)  #交易次数
+    mothod = models.CharField(max_length=100)  # 交易方式
+
+class Authority(models.Model):
+    objects = models.Manager()
+    user_id = models.CharField(max_length=100)
+    store = models.CharField(max_length=100)#存储权限
+    telephone = models.CharField(max_length=100)  #电话权限
+    email = models.CharField(max_length=100)  #邮件权限
