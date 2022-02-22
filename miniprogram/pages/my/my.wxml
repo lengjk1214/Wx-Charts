@@ -1,0 +1,82 @@
+<view wx:if="{{isHide}}">
+  <view wx:if="{{canIUse}}">
+    <view class='header'>
+      <image src='/images/wx.png'></image>
+    </view>
+
+    <view class='content'>
+      <view>申请获取以下权限</view>
+      <text>获得你的公开信息(昵称，头像等)</text>
+    </view>
+
+    <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+      授权登录
+    </button>
+  </view>
+  <view wx:else>请升级微信版本</view>
+</view>
+
+<view wx:else>
+  <view class="userinfo">
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+
+
+<!--监听button点击事件-->
+<button bindtap="listenerButton" type="primary">会员信息</button>
+<button bindtap="listenerButton2" type="primary">购买次数</button>
+<button bindtap="listenerButton3" type="primary">还剩免费次数</button>
+<button bindtap="listenerButton4" type="primary">设置</button>
+<button bindtap="listenerButton5" type="primary">退出登录</button>
+
+
+<!--弹出框-->
+<modal 
+    title="会员信息"
+     hidden="{{hiddenModal}}"
+     confirm-text="确定"
+     cancel-text="取消"
+     bindconfirm="listenerConfirm"
+     bindcancel="listenerCancel" >
+     您当前的会员状态为{{cur_is_vip}}
+     </modal>
+
+     <modal 
+    title="购买次数"
+     hidden="{{hiddenModal2}}"
+     confirm-text="确定"
+     cancel-text="取消"
+     bindconfirm="listenerConfirm2"
+     bindcancel="listenerCancel2" >
+     您当前的购买次数为{{cur_buy}}
+     </modal>
+
+     <modal 
+    title="还剩免费次数"
+     hidden="{{hiddenModal3}}"
+     confirm-text="确定"
+     cancel-text="取消"
+     bindconfirm="listenerConfirm3"
+     bindcancel="listenerCancel3" >
+     您当前还剩免费次数为{{cur_free}}
+     </modal>
+
+     <modal 
+    title="退出登录"
+     hidden="{{hiddenModal5}}"
+     confirm-text="确定"
+     cancel-text="取消"
+     bindconfirm="listenerConfirm5"
+     bindcancel="listenerCancel5" >
+     您是否真的要退出应用
+     </modal>
+
+
+
+
+
+
+
+
+</view>

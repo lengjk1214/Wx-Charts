@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/my/my",
+    "pages/pay/pay",
+    "pages/index/index",
+    "pages/charts/scrollline/scrollline",
+    "pages/charts/radar/radar",
+    "pages/charts/line/line",
+    "pages/charts/column/column",
+    "pages/charts/pie/pie",
+    "pages/charts/ring/ring",
+    "pages/charts/area/area",
+    "pages/charts/ScrollColumn/ScrollColumn"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "wxCharts Demo",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text": "首页",
+      "iconPath": "images/home.png",
+      "selectedIconPath": "images/home1.png"
+    },
+    {
+      "pagePath": "pages/index/index",
+      "text": "转换",
+      "iconPath": "images/index.png",
+      "selectedIconPath": "images/index1.png"
+    },
+    {
+      "pagePath": "pages/pay/pay",
+      "text": "支付",
+      "iconPath": "images/pay.png",
+      "selectedIconPath": "images/pay1.png"
+    },
+    {
+      "pagePath": "pages/my/my",
+      "text": "我的",
+      "iconPath": "images/my.png",
+      "selectedIconPath": "images/my1.png"
+    }
+  
+  ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

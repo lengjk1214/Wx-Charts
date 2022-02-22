@@ -1,0 +1,16 @@
+<!--pages/home/home.wxml-->
+<view>
+  <input type="text" placeholder="请输入数据1" placeholder-class="placeholder" bindinput="inputdata1" />
+  
+  <input type="text" placeholder="请输入数据2" placeholder-class="placeholder" bindinput="inputdata2" />
+
+  <input type="text" placeholder="请输入数据3" placeholder-class="placeholder" bindinput="inputdata3" />
+
+  <input type="text" placeholder="请输入数据4" placeholder-class="placeholder" bindinput="inputdata4" />
+
+  <input type="text" placeholder="请输入数据5" placeholder-class="placeholder" bindinput="inputdata5" />
+
+  <input type="text" placeholder="请输入数据6" placeholder-class="placeholder" bindinput="inputdata6" />
+
+  <button bindtap="save">保存</button>
+</view>

@@ -1,0 +1,13 @@
+<view class='container'>
+
+  <button class='button' bindtap='buttonTap' type='primary'>显示支付二维码</button>
+
+  <modal title="支付" hidden="{{modalHidden}}" bindconfirm="modalConfirm" bindcancel="modalCandel">
+    <view>
+      <image class="image" src="/images/code.jpg" mode='aspectFill'></image>
+    </view>
+    <view></view>
+    <view>欢迎为我们的项目进行支付</view>
+   </modal>
+
+</view>
